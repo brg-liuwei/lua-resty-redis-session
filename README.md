@@ -4,7 +4,7 @@ lua-resty-redis_session-module
 
 Dependency
 ----------
-*** [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie) ***
+** [lua-resty-cookie](https://github.com/cloudflare/lua-resty-cookie) **
 
 
 Install
@@ -12,20 +12,20 @@ Install
     git clone https://github.com/cloudflare/lua-resty-cookie.git
     git clone https://github.com/brg-liuwei/lua-resty-redis_session.git
 
-*** assume the install path of openresty is /usr/local/openresty/ ***
+** assume the install path of openresty is /usr/local/openresty/ **
 
     cp lua-resty-cookie/lib/resty/cookie.lua /usr/local/openresty/lualib/resty/
     cp lua-resty-redis_session/lib/resty/redis_session.lua /usr/local/openresty/lualib/resty/
     
 Example
 -------
-*** set host (your browser may not support set cookie at localhost) ***
+** set host (your browser may not support set cookie at localhost) **
 
-*** see: [http://stackoverflow.com/questions/1134290/cookies-on-localhost-with-explicit-domain](http://stackoverflow.com/questions/1134290/cookies-on-localhost-with-explicit-domain) ***
+** see: [http://stackoverflow.com/questions/1134290/cookies-on-localhost-with-explicit-domain](http://stackoverflow.com/questions/1134290/cookies-on-localhost-with-explicit-domain) **
 
     echo "127.0.0.1 www.mysite.com" | sudo tee -a /etc/hosts
 
-*** edit your nginx config file: ***
+** edit your nginx config file: **
 
     server {
         server_name www.mysite.cn; # important! CANNOT use localhost
@@ -100,6 +100,6 @@ Example
         }
     }
 
-*** reload nginx ***
+** reload nginx **
 
     /usr/local/openresty/nginx/sbin/nginx -sreload -c /path/to/your/nginx.conf
