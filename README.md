@@ -78,7 +78,7 @@ Example
                 end
                 
                 ngx.say("<html><body>Session was started by <strong>",
-                    s.session.data.name or "Anonymous",
+                    s.session.data.username or "Anonymous",
                     "</strong>! <p>context: ",
                     s.session.data.ctx or "not context",
                     "</p><div><p><a href=/destroy>click here to destroy session",
